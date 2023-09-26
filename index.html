@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Yorushika Songs</title>
+</head>
+<body><center>
+    <h1>Array Methods</h1>
+    <div class="song">
+    <h2>Yorushika Top 10 Songs</h2>
+    <p id="display"></p> 
+    </div> 
+    <div class="button">
+    <h3>Array Length Method</h3>
+    <button onclick="arrayLength()">Array Length</button>
+    <p id="arrayLength"></p>
+    <h3>Array to String Method</h3>
+    <button onclick="arraytoString()">Array to String</button>
+    <p id="arraytoString"></p>
+    <h3>Array Pop Method</h3>
+    <button onclick="arrayPop()">Pop the Last Song</button>
+    <p id="arrayPop"></p> 
+    </div><br><br><br>
+    </center>
+    <script>
+        const Song = ["  Say It. ", " Liar ", " Eat The Wind ", " Tada Kimi ni Hare ", " The Old Man and the Sea ", "Spring Thief", 
+        " Ghost In A Flower ", " Left-Right Confusion ", " Nautilus ", " Night Journey "];
+
+        function display() {
+            const displaysong = Song.join("<br>");
+            document.getElementById("display").innerHTML = displaysong;
+        }
+
+        function arrayLength() {
+            const length = Song.length;
+            document.getElementById("arrayLength").innerHTML = "Array Length: " + length;
+            display();
+        }
+
+        function arraytoString() {
+            const string = Song.toString();
+            document.getElementById("arraytoString").innerHTML = string;
+            display();
+        }
+
+        function arrayPop() {
+            const popped = Song.pop();
+            document.getElementById("arrayPop").innerHTML = "Popped song: " + popped;
+            display();
+        } 
+        display();
+    </script>
+</body>
+</html>
